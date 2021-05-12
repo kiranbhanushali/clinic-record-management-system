@@ -1,0 +1,14 @@
+CFLAGS = -O
+CC = g++
+
+SRC = main.cpp 
+OBJ = $(SRC:.cpp = .o)
+
+build: $(OBJ)
+    $(CC) $(CFLAGS)  -o build $(OBJ)
+
+run: 
+    ./main
+
+clean:
+  rm -f *.o
